@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing:border-box;
+            font-family: 'lexend',sans-serif;
+        }
+        html{
+            font-size: 62.5%;
+        }
+       .main{
+        display: flex;
+         align-items:center;
+         justify-content: center;
+           width: 100vw;
+           height:100vh;
+           background-color: black;   
+           overflow: hidden;   
+       }
+       .container
+       {
+          display:flex;
+          
+          height:80%;  
+          width:70%;
+          
+       }
+       .shoes_photo
+       {
+         position: relative;
+         height: 100%;
+         width:40%;
+         background-color: #c6ac8f;
+         border-radius: 2.5rem 0rem 0rem 2.5rem;
+       }
+       .about
+       {
+
+        height:100%;
+        width:60%;
+        position: relative;
+        background-color: #eae0d5;
+        border-radius: 0rem 2.5rem 2.5rem 0rem;
+        padding: 1rem .2rem;
+       }
+       .shoes_photo #logo
+        {
+          position:absolute;
+          top:-1rem;
+          left:35%;
+          width: 15rem;
+        }
+        .shoes_photo #shoe
+        {
+            position:absolute;
+            top:10rem;
+            left:-15%;
+            width: 111%;
+            transform: rotate(12deg);
+            transition: 0.7s ease;
+            z-index: 10;
+        }
+        #shoe:hover
+        {
+        transform: rotate(-5deg)
+        }
+        .about h1{
+            font-size: 4rem;
+            font-weight:bolder;
+            margin-top: 2.1rem;
+            margin-left: 2rem;
+            text-shadow: 2px 1px 2px  rgba(87, 94, 101, 1);
+        }
+        .about #cross
+        {
+            position: absolute;
+            left: 52rem;  
+            top: 2rem;
+            font-size: 4rem;
+            color: #212529;
+            cursor: pointer;
+        }
+        .about h3{
+            font-size: 2.2rem;
+            font-weight:100;
+            position:absolute;
+            top:8rem;
+            left:2rem;
+            color: #5e503f;
+        }
+
+        .rate
+        {
+            display: flex;
+             justify-content: left;
+             margin-top: 5rem;
+             margin-right: 20px;
+             gap: 24rem;
+        }
+        .rate h5{
+            font-size: 2.5rem;
+            color: #415a77;
+            padding-left: 2rem;
+            
+            font-weight:700;
+        }
+        .rating i
+        {  
+            
+           margin-top: 1rem;
+           margin:0 0.2rem;
+           font-size: 2rem;
+           color: #415a77;
+           cursor:pointer;
+        }
+       .rating span
+       {
+        position: absolute;
+         font-size: 2rem;
+         top: 15rem;
+         right: 19rem;
+         font-weight: 600;
+         color: #5e503f;
+       }
+       .about p{
+        font-size:1.8rem;
+        margin-top: 8rem;
+        color: #5e503f;
+        padding-left:2rem ;
+        
+       }
+       .about h2{
+        font-size:2.5rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+       }
+       .about .size {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        margin-left:2rem;
+       display: flex;
+       justify-content: left;
+       
+       align-items: center;
+        gap: 25px;
+       }
+       .size a{
+        text-decoration: none;
+        font-size: 2rem;
+        display: inline-block;
+        border: 0.1rem solid #415a77;
+        color:#415a77;
+        text-align: center;
+        padding: 0.8rem;
+
+        height:4.5rem;
+        width:4.5rem;
+        border-radius:50%;
+        box-shadow:rgba(136, 165, 191, 0.48) 3px 1px 8px 0px, rgba(255, 255, 255, 0.8) -3px -1px 8px 0px; 
+       }
+
+       .size a:nth-child(3)
+       {
+        background-color: #415a77;
+        color: white;
+       }
+       .about .btn
+       {
+        padding: 1rem 2rem;
+        text-decoration:none;
+        font-size:1.8rem;
+        font-weight:600;
+        border:0.1rem solid #415a77;
+        text-transform:uppercase;
+        margin:2rem 0rem 0rem 2rem;
+        cursor:pointer;
+        color:#415a77;
+        box-shadow: rgba(136, 165, 191, 0.48) 3px 1px 8px 0px, rgba(255, 255, 255, 0.8) -3px -1px 8px 0px;
+        transition: 0.4s ease;
+       }
+       .about .btn-primary {
+        background-color: #415a77;
+        color: white;
+       }
+
+       .btn:hover{
+              border-radius:2.5rem;
+       }
+
+   @media(max-width:500px)
+   {
+    .container
+       {
+          display:flex;
+          flex-wrap: wrap;
+          height:90%; 
+          width:80%;
+          
+       }
+       .shoes_photo
+       {
+         position: relative;
+         height: 40%;
+         width:100%;
+         background-color: #c6ac8f;
+         border-radius: 2.5rem 2.5rem 0rem 0rem;
+       }
+       .about
+       {
+
+        height:60%;
+        width:100%;
+        position: relative;
+        background-color: #eae0d5;
+        border-radius: 0rem 0rem 2.5rem 2.5rem;
+        padding: 1rem .2rem;
+       }
+
+       .shoes_photo #logo
+        {
+          position:absolute;
+          top:-1rem;
+          left:66%;
+          width: 12rem;
+        }
+        .shoes_photo #shoe
+        {
+            position:absolute;
+            top:0rem;
+            left:0%;
+            width: 60%;
+            transform: rotate(10deg);
+            transition: 0.7s ease;
+            
+        }
+        .shoes_photo #shoe:hover
+        {
+          transform: rotate(-5deg);
+        }
+
+        .about h1{
+            font-size: 3rem;
+            font-weight:bolder;
+            margin-top: 2.1rem;
+            margin-left: 2rem;
+            text-shadow: 2px 1px 2px  rgba(87, 94, 101, 1);
+        }
+        .about #cross
+        {
+            
+            visibility: hidden;
+        }
+        .about h3{
+            font-size: 2.2rem;
+            font-weight:100;
+            position:absolute;
+            top:7rem;
+            left:2rem;
+            color: #5e503f;
+        }
+
+        .rate
+        {
+            display: flex;
+            
+             justify-content: left;
+             margin-top: 5rem;
+             margin-right: 20px;
+             gap: 24rem;
+        }
+        .rate h5{
+            
+            visibility: hidden;
+        }
+        .rating i
+        {  
+          display: block;
+           position: relative;
+           left:-1rem;
+           top:-23rem;
+          
+           font-size: 2rem;
+           color: #415a77;
+           cursor:pointer;
+        }
+       .rating span
+       {
+        position: absolute;
+         font-size: 1.7rem;
+         top:-3.1rem;
+         right: 1rem;
+         font-weight: 600;
+         color: #5e503f;
+         
+       }
+
+       .about p{
+         position:absolute;
+        font-size:1.6rem;
+        top:2rem;
+        left:2rem;
+        color: #5e503f;
+        padding-left:2rem ;
+        padding-right: 2rem;
+        
+       }
+       .about h2{
+        font-size:1.8rem;
+        margin-top: -1rem;
+        margin-left: 15rem;
+       }
+       .about .size {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        margin-left:2rem;
+       display: flex;
+       justify-content: center;
+       
+       align-items: center;
+        gap: 10px;
+       }
+
+       .size a{
+        text-decoration: none;
+        font-size: 1.8rem;
+        display: inline-block;
+        border: 0.1rem solid #415a77;
+        color:#415a77;
+        text-align: center;
+        padding: 0.2rem;
+
+        height:3rem;
+        width:3rem;
+        border-radius:50%;
+        box-shadow:rgba(136, 165, 191, 0.48) 3px 1px 8px 0px, rgba(255, 255, 255, 0.8) -3px -1px 8px 0px; 
+       }
+
+       .about .btn
+       {
+        position: relative;
+        top:-2rem;
+        left:1rem;
+        padding: 1rem 1.5rem;
+        text-decoration:none;
+        font-size:1.5rem;
+        font-weight:600;
+        border:0.1rem solid #415a77;
+        text-transform:uppercase;
+        margin-left:7rem;
+        
+        cursor:pointer;
+        color:#415a77;
+        box-shadow: rgba(136, 165, 191, 0.48) 3px 1px 8px 0px, rgba(255, 255, 255, 0.8) -3px -1px 8px 0px;
+        transition: 0.4s ease;
+       }
+       .about .btn-primary {
+        background-color: #415a77;
+        color: white;
+         margin-left: 3rem;
+       }
+
+       .btn:hover{
+              border-radius:2.5rem;
+       }
+
+   }
+    </style>
+</head>
+<body>
+   <div class="main">
+      <div class="container">
+             <div class="shoes_photo">
+               <img src="3.png" alt="logo" id="logo">
+               <img src="PngItem_1209032.png" alt="Nike_shoes" id="shoe">
+             </div>
+             <div class="about">
+                 <h1>Basketball Nike Shoes</h1>
+                 <i class="fa-solid fa-xmark" id="cross"></i>
+                 <h3>Golden White</h3>
+
+                  <div class="rate">
+                    <h5>$159</h5>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>(80%)</span>
+                    </div>
+                  </div>
+             
+                    <p>Nike basketball shoes offer superior performance, style, and comfort. Designed with innovative technology, 
+                        they provide excellent grip and support for players, making them a top choice on the court.</p>
+                
+                   <h2>Size (UK)</h2>
+                   <div class="size">
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a href="#">11</a>
+                   </div>
+                   <a href="#" class="btn">Save</a>
+                   <a href="#" class="btn btn-primary">add to cart</a>
+                   
+                 
+                   </div>
+             </div>
+      </div>
+   </div>    
+</body>
+</html>
